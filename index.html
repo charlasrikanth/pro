@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>UTTAR PRADESH TOURISM</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	
+	<div class="project" id="app">
+		<div class="box" id="list">
+		<input class="search" placeholder="TYPE HERE" id="search-box" data-bind="textInput: searchTerm, valueUpdate: 'afterkeydown'" />
+			<ul class="results" id="results" data-bind="foreach: filteredList">
+				<li class="place" id="place" data-bind="text: name, click: bounce"></li>
+			</ul>
+		</div>
+		<div class="pic" id="map">If you can read this, please reloaad</div>
+	</div>
+
+
+	<script src='js/knockout-3.4.0.js'></script>
+	<script src='js/jquery-1.12.0.min.js'></script>
+	<script src='js/file.js'></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA6qoUKQ3WJQd4ZxAahhFPM80WJbw-yws&callback=startApp&libraries=places" onerror="errorHandling()"></script>
+</body>
+</html>
